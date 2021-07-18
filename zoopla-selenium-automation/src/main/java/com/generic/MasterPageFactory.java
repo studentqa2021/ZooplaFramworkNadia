@@ -15,25 +15,26 @@ public class MasterPageFactory {
 	@FindBy (xpath="(//*[contains(text(),'Accept all cookies')])[2]")
 	private WebElement acceptAllCookiesBtn;
 	
-	@FindBy(xpath = "(//*[contains(@class,'css-18xug1d-ButtonLink-Button-ButtonLinkWithIcon et03gpj0')])[4]")
+	@FindBy(xpath = "(//*[@class='css-18xug1d-ButtonLink-Button-ButtonLinkWithIcon et03gpj0'])[4]")
 	private WebElement Signinbutton;
 	
 	
-	@FindBy(xpath = "//*[@name='email']")
+	@FindBy(xpath = "//*[contains(@id,'input-email-address')]")
 	private WebElement email;
 	
-	@FindBy(xpath = "//*[@name='password']")
+	@FindBy(xpath = "//*[@id='input-password']")
 	private WebElement password;
 	
-	@FindBy(xpath = "(//*[contains(text(),'Sign in')])[10]")
+	@FindBy(xpath = "//*[@class='css-gi0wky-Button-SignInButton e1oiir0n4']")
 	private WebElement signinbutton2;
 	
-	@FindBy(xpath =  "(//*[contains(@class,'css-18ufi8 e1niaah3')])[1]")
+	@FindBy(xpath =  "(//*[contains(text(),'My Zoopla')])[1]")
 	private WebElement Myzooplabtn;
 
-	@FindBy(xpath = "(//*[contains(@class,'layout-standard-flipped myaccount')])[2]")
+	@FindBy(xpath = "(//*[contains(text(),'Sign out')])[1]")
 	private WebElement Signoutbutton;
 
+	
 	public WebElement getAcceptallcookies() {
 		return acceptAllCookiesBtn;
 	}
@@ -53,14 +54,11 @@ public class MasterPageFactory {
 	public WebElement getSigninbutton2() {
 		return signinbutton2;
 	}
-
 	public WebElement getMyzooplabtn() {
 		return Myzooplabtn;
 	}
-
 	public WebElement getSignoutbutton() {
 		return Signoutbutton;
 	}
 
 }
-	
