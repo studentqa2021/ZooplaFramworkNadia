@@ -28,7 +28,7 @@ public class MasterPageFactory {
 	@FindBy(xpath = "//*[@class='css-gi0wky-Button-SignInButton e1oiir0n4']")
 	private WebElement signinbutton2;
 	
-	@FindBy(xpath =  "(//*[contains(text(),'My Zoopla')])[1]")
+	@FindBy(xpath =  "(//*[@class='css-18xug1d-ButtonLink-Button-ButtonLinkWithIcon et03gpj0'])[5]")
 	private WebElement Myzooplabtn;
 
 	@FindBy(xpath = "(//*[contains(text(),'Sign out')])[1]")

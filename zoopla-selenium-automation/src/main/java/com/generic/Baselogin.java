@@ -1,6 +1,7 @@
 package com.generic;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import com.util.BaseConfig;
 import com.util.HighLighter;
@@ -25,14 +26,17 @@ public class Baselogin {
 		
 		obj.getSigninbutton2().click();
 		
-//		obj.getMyzooplabtn().click();
-//		
-//		obj.getSignoutbutton().click();
-//	 
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			
+			e.printStackTrace();
+		}
+		Actions ac = new Actions(driver);
+		ac.moveToElement(obj.getMyzooplabtn()).build().perform();
 		
-		
-		
-		
+	    obj.getSignoutbutton().click();
+	 
 		
 		return obj;
 	}
